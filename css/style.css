@@ -129,21 +129,58 @@ img {
  ************************************************/
 
 
- .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 body {
     display: flex;
     flex-flow: column wrap;
 }
 
-@media screen and (max-width: 768px) {
+ .container {
+    max-width: 1140px;
+    width: 100%;
+ }
+
+@media screen and (max-width: 480px) {
+
+
     .container {
-        max-width: 780px;
-        margin: 0 auto;
-        padding: 0 20px;
+        max-width: 500px;
+    } 
+
+
+    .container .row {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
     }
+
+    .container .row .col {
+        width: 100%;
+    }
+
+    .container .row .col .card {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .steps {
+        margin-bottom: 0;
+    }
+
+    .why-us {
+        background: #222222;
+        margin-bottom: 0;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .why-us .col-right:last-of-type h3 {
+        margin-top: 2em;
+    }
+
+
 }
+
+
